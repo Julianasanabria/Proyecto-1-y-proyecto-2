@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Desplegable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu" style="width: 100%; position: fixed; top: 0; left: 0;">
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <div class="menu-content">
+            <img src="https://via.placeholder.com/800x600" alt="Imagen 1">
+            <p>Click para ver</p>
+            <hr>
+            <img src="https://via.placeholder.com/800x600" alt="Imagen 2">
+            <p>Click para ver</p>
+            <hr>
+            <img src="https://via.placeholder.com/800x600" alt="Imagen 3">
+            <p>Click para ver</p>
+            <hr>
+        </div>
+    </div>
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="https://via.placeholder.com/800x600" alt="Imagen 1">
+            <p>Click para ver</p>
+            <hr>
+        </div>
+        <div class="image-wrapper">
+            <img src="https://via.placeholder.com/800x600" alt="Imagen 2">
+            <p>Click para ver</p>
+            <hr>
+        </div>
+        <div class="image-wrapper">
+            <img src="https://via.placeholder.com/800x600" alt="Imagen 3">
+            <p>Click para ver</p>
+            <hr>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menuContent = document.querySelector('.menu-content');
+            const imageContainer = document.querySelector('.image-container');
+            if (menuContent.style.display === 'block') {
+                menuContent.style.display = 'none';
+                imageContainer.style.display = 'flex';
+            } else {
+                menuContent.style.display = 'block';
+                imageContainer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
